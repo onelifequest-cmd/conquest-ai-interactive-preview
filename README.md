@@ -1,7 +1,7 @@
 # Conquest AI — interactive preview (not live)
 
 Lusion-style interactive preview of the Conquest AI offer page, built from the Scores OS interactive kit
-(Three.js + GSAP ScrollTrigger + Lenis, theme in `config.json`).
+(Three.js + GSAP ScrollTrigger + Lenis, theme in `site.json`).
 
 - Static site, no build step. `noindex` meta + `robots.txt` (Disallow: /).
 - Motif: blue signal-strand field, an automation network that lights up as busywork gets knocked away,

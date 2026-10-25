@@ -3,7 +3,7 @@ export function initMaxine(chat, { reduced, coarse }){
   const $ = id => document.getElementById(id);
   const panel = $('chat'), log = $('chat-log'), qwrap = $('chat-q'), form = $('chat-form'), input = $('chat-input');
   const orb = $('orb');
-  const avatar = chat.avatar || 'maxine.webp';
+  const avatar = chat.avatar || 'assets/avatar.png';
   document.querySelectorAll('[data-orb] img, .chat-h img').forEach(i => i.src = avatar);
   document.querySelectorAll('[data-chatlabel]').forEach(e => e.textContent = chat.label || 'Ask Maxine');
   orb.setAttribute('aria-label', chat.label || 'Ask Maxine');

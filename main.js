@@ -5,7 +5,7 @@ import Lenis from './vendor/lenis.mjs';
 import { initMaxine } from './maxine.js';
 
 const qs = new URLSearchParams(location.search);
-const cfgFile = qs.get('config') || 'config.json';
+const cfgFile = qs.get('config') || 'site.json';
 let cfg;
 try { cfg = await (await fetch(cfgFile)).json(); }
 catch (e) { console.warn('config fetch failed, using defaults', e); cfg = {}; }
