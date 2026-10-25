@@ -182,3 +182,7 @@ h1 .hl{background-image:linear-gradient(90deg,var(--goldL),#22D3EE)}
 @media (max-width:600px){.fgrid{grid-template-columns:1fr}.features{padding-top:80px}}
 .features + .lead{background:var(--deep);max-width:none;margin:0;padding-left:max(5vw,calc((100% - 1100px)/2));padding-right:max(5vw,calc((100% - 1100px)/2))}
 .features + .lead > *{max-width:900px}
+
+/* legibility over the signal strands */
+.stage p:not(.eyebrow){ text-shadow:0 1px 2px rgba(6,16,31,.95), 0 0 14px rgba(6,16,31,.9); color:#E8F1FF; }
+.stage h2{ text-shadow:0 2px 18px rgba(6,16,31,.85); }
