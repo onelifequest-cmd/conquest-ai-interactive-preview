@@ -1,0 +1,86 @@
+{
+  "client": "Conquest AI",
+  "slug": "conquest-ai",
+  "motif": "ai-agents",
+  "tier": "premium_interactive",
+  "logo": "assets/logo.png",
+  "colors": {
+    "deep": "#06101F",
+    "primary": "#0B4FC4",
+    "gold": "#2F8CFF",
+    "goldLight": "#7CC4FF",
+    "mint": "#E8F1FF",
+    "low": "#8FA3BF",
+    "mid": "#3B82F6",
+    "good": "#22D3EE",
+    "top": "#BDEBFF",
+    "tile": "#E5484D"
+  },
+  "font": "Inter",
+  "copy": {
+    "eyebrow": "Conquest AI · AI agents + automations",
+    "h1a": "Your own",
+    "h1b": "AI team,",
+    "h1c": "working every day.",
+    "sub": "Calls go unanswered, follow-ups come too late, and past customers never hear from you again. Conquest AI builds and runs your AI receptionist, follow-ups and automations in your CRM, while you stay in control.",
+    "ctaPrimary": "Book a call",
+    "ctaPrimaryHref": "#lead",
+    "ctaSecondary": "See how it works",
+    "ctaSecondaryHref": "#story",
+    "unlock": "On autopilot",
+    "unlockTag": "Your AI team",
+    "disclaimer": "Illustrative visuals and numbers only. Results vary and nothing is guaranteed. Nothing goes out to your customers until you've approved it."
+  },
+  "score": {
+    "from": 0, "to": 100, "start": 40, "unlockAt": 95, "durationMs": 4200, "suffix": "%",
+    "bands": [[30, "Doing it by hand"], [60, "Catching up"], [92, "Automating"], [101, "On autopilot"]]
+  },
+  "grass": { "bladesDesktop": 42000, "bladesMobile": 9000, "cursorRadius": 2.6 },
+  "chat": {
+    "label": "Ask Conquest AI",
+    "href": "#lead",
+    "avatar": "assets/avatar.png",
+    "name": "Conquest AI",
+    "sub": "Preview: canned answers, no live AI",
+    "intro": "Hi! Ask me what Conquest AI does, how the AI receptionist works, or how to get started.",
+    "fallback": "I don't have that one in this preview. Leave your details in the form and the team will follow up.",
+    "footer": "Please don't share passwords or card numbers in chat.",
+    "kb": [
+      { "q": "What is Conquest AI?", "k": ["what is", "conquest", "about", "what do you do", "services"],
+        "a": "Conquest AI is our done-for-you AI system. We build and run an AI receptionist, follow-ups and automations in your CRM, give you a dedicated AI agent for your business, and Mission Control so you can see it all. It carries your brand, not ours." },
+      { "q": "What does the AI receptionist do?", "k": ["receptionist", "calls", "phone", "answer", "voice"],
+        "a": "It answers calls 24/7 in your business name, handles common questions the way you would, books consults on your calendar, and texts or emails your pricing and a pay link while the caller is still interested. Then it follows up with the ones who go quiet." },
+      { "q": "What's a dedicated client agent?", "k": ["agent", "dedicated", "assistant", "ai agent"],
+        "a": "It's an AI agent that works only for your business. It handles follow-ups, task tracking and reports, builds automations in your CRM, and takes on research, content drafts and admin. If a task needs a person, our team steps in." },
+      { "q": "Do I own my leads and data?", "k": ["own", "data", "leads", "account", "number"],
+        "a": "Yes. It's built on your own phone number and accounts, so you own the leads and the data." },
+      { "q": "Will the AI say something wrong?", "k": ["wrong", "compliance", "robot", "mistake", "promise"],
+        "a": "It only says what you approve, it doesn't promise results, and it sticks to your script and required disclosures. You hear it and sign off before it ever talks to a customer." },
+      { "q": "How do I get started?", "k": ["start", "book", "consult", "call", "how long", "onboard"],
+        "a": "It starts with one consultation call. What you tell us becomes a proposal page in your brand. After you enroll, you fill out an onboarding form, and you go live about 2 weeks after your texting registration is approved." },
+      { "q": "How much does it cost?", "k": ["cost", "price", "pricing", "how much", "fee", "$"],
+        "a": "Pricing depends on what we build for you, and we go over it on your consultation call." }
+    ],
+    "buttons": [ { "label": "Book a call", "href": "#lead", "style": "gold" } ]
+  },
+  "tiles": {
+    "labels": ["Missed calls", "Slow follow-up", "No-shows", "Data entry", "Unpaid invoices", "After-hours leads", "Chasing reviews", "Manual reminders", "Cold past clients", "Copy-paste texts", "Late replies", "Lost leads"],
+    "mobileCount": 6,
+    "hint": "Knock the busywork away",
+    "hintTouch": "Tap or swipe the busywork away",
+    "note": "Illustrative. Results vary.",
+    "a11yPrefix": "Automate"
+  },
+  "story": {
+    "bureaus": [["Receptionist", 0, 100], ["Follow-up", 0, 100], ["Your agent", 0, 100]],
+    "stages": [
+      { "eyebrow": "01 · One call", "h": "One call. Your whole plan.", "p": "It starts with one consultation call. What you tell us becomes a proposal page in your brand, with your problems in your own words and the automations we'll build to fix them." },
+      { "eyebrow": "02 · Built for you", "h": "Built on your own accounts.", "p": "Your AI receptionist answers calls 24/7 and books consults on your calendar. Speed-to-lead, reminders and follow-ups run in your CRM, on your own number, so you own the leads and the data." },
+      { "eyebrow": "03 · Your agent", "h": "A dedicated agent for your business.", "p": "Your own AI agent learns your business and handles the work. A real person on our team reviews it, and nothing goes out to your customers until you've approved it." },
+      { "eyebrow": "04 · Mission Control", "tag": "Your AI team", "h": "See everything in one place.", "p": "Mission Control shows today's activity, your leads and what needs you, with a usage gauge so you always know what's running." }
+    ],
+    "doorLabel": "Mission Control",
+    "doorTag": "by Conquest AI"
+  },
+  "lead": { "endpoint": "", "note": "Preview only: this form doesn't send anything." }
+}

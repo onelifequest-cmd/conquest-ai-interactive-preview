@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Conquest AI — interactive preview (not live)</title>
+<meta name="description" content="Conquest AI: your own AI team, working every day. Interactive preview, not live.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/logo.png">
+<link rel="preload" href="fonts/Inter-sub.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="modulepreload" href="vendor/three.module.min.js">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="lead.css">
+</head>
+<body>
+<div class="proofbar">INTERACTIVE PREVIEW — not live · Conquest AI · the form and chat don't send anything <code id="cfgname" hidden>config.json</code></div>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="#"><img id="logo" src="assets/logo.png" alt="" width="40" height="40"><span id="brandname">Conquest AI</span></a>
+  <a class="btn gold sm" data-href="ctaPrimaryHref" href="#lead">Book a call</a>
+</header>
+
+<main>
+<section class="hero" id="hero">
+  <div class="hero-grid">
+    <div class="copy">
+      <p class="eyebrow" data-copy="eyebrow"></p>
+      <h1><span data-copy="h1a"></span> <span class="hl" data-copy="h1b"></span> <span data-copy="h1c"></span></h1>
+      <p class="sub" data-copy="sub"></p>
+      <div class="ctas">
+        <a class="btn gold" data-href="ctaPrimaryHref" data-copy="ctaPrimary" href="#"></a>
+        <a class="btn ghost" data-href="ctaSecondaryHref" data-copy="ctaSecondary" href="#"></a>
+      </div>
+      <p class="hint"><button id="replay" class="link" type="button">↻ Replay</button> <span class="dot">·</span> <span class="hint-t" id="hintt">Knock the busywork away</span></p>
+    </div>
+    <div class="media score-slot" id="slot" role="img" aria-label="Illustrative meter: share of busywork automated">
+      <div class="score-inner">
+        <div class="num" id="num">0%</div>
+        <div class="lbl">Busywork automated</div>
+        <div class="band" id="band">Doing it by hand</div>
+        <div class="unlock" id="unlock"><span class="chk">✓ <span data-copy="unlock"></span></span><span class="tag" data-copy="unlockTag"></span></div>
+      </div>
+    </div>
+    <div class="tilerow">
+      <div class="media tilezone" id="tilezone">
+        <div class="tilechips" id="tilechips" aria-label="Manual chores (illustrative). Activate one to automate it."></div>
+      </div>
+      <p class="tilenote" id="tilenote">Illustrative. Results vary.</p>
+    </div>
+  </div>
+  <div class="orb-dock-m"><button class="orb inflow" type="button" data-orb aria-haspopup="dialog"><span class="orb-glow"></span><img src="assets/avatar.png" alt="" width="52" height="52"><span class="orb-l" data-chatlabel>Ask us</span></button></div>
+</section>
+
+<section class="story" id="story" aria-label="How Conquest AI works, from one call to Mission Control">
+  <div class="pin" id="pin">
+    <div class="story-grid">
+      <div class="svis" id="svis">
+        <div class="gaugewrap" id="gaugewrap">
+          <div class="media gauge" id="gauge" role="img" aria-label="Illustrative build progress">
+            <div class="gin"><div class="gnum" id="gnum">0%</div><div class="lbl">Build progress</div></div>
+          </div>
+          <div class="bureaus" id="bureaus"></div>
+        </div>
+        <div class="media doorslot" id="doorslot" role="img" aria-label="Glowing AI core labelled Mission Control by Conquest AI"><div class="cssdoor"><span></span><em>Mission Control</em></div></div>
+      </div>
+      <div class="stext" id="stext"></div>
+    </div>
+    <div class="sprog" id="sprog" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section class="features" id="what" aria-labelledby="what-h">
+  <p class="eyebrow">What we build and run for you</p>
+  <h2 id="what-h">Done for you, in your brand, on your accounts.</h2>
+  <ul class="fgrid">
+    <li><b>AI receptionist + voice AI</b><span>Answers calls, qualifies callers and books appointments, day or night.</span></li>
+    <li><b>Speed-to-lead + nurture</b><span>Reaches new leads within minutes, then keeps following up.</span></li>
+    <li><b>Reminders + payment links</b><span>Show-up and close reminders, with payment links sent while interest is high.</span></li>
+    <li><b>Database reactivation</b><span>Brings past leads and customers back into the conversation.</span></li>
+    <li><b>Reviews + referrals</b><span>More reviews and referrals from the customers you already have.</span></li>
+    <li><b>Funnels + CRM builds</b><span>Pages, pipelines and automations built in your CRM.</span></li>
+    <li><b>Your dedicated AI agent</b><span>Learns your business: follow-ups, task tracking, reports, research, content and admin.</span></li>
+    <li><b>Mission Control</b><span>Your branded dashboard: today's activity, leads and what needs you, with a usage gauge.</span></li>
+    <li><b>Real people behind it</b><span>Our team reviews the work and supports you in a private Discord channel.</span></li>
+  </ul>
+  <p class="fnote">Nothing goes out to your customers until you've approved it.</p>
+</section>
+
+<section class="notes lead" id="lead">
+  <h2>Book a call</h2>
+  <p class="lead-sub">One consultation call is all it takes to map out what your AI team should handle first. Leave your details and we'll reach out to set it up.</p>
+  <form id="lead-form" class="lead-form" data-endpoint="" novalidate>
+    <label><span>Full name *</span><input name="name" type="text" required autocomplete="name"></label>
+    <label><span>Mobile phone *</span><input name="phone" type="tel" required autocomplete="tel"></label>
+    <label><span>Email *</span><input name="email" type="email" required autocomplete="email"></label>
+    <label><span>Business name</span><input name="business" type="text" autocomplete="organization"></label>
+    <label class="hp" aria-hidden="true"><span>Company website</span><input name="website" tabindex="-1" autocomplete="off"></label>
+    <label class="consent"><input type="checkbox" name="consent" required> <span>I agree to be contacted by Conquest AI by phone, text or email about my request. Msg &amp; data rates may apply. Reply STOP to opt out.</span></label>
+    <button class="btn gold" type="submit">Book a call</button>
+    <p class="lead-msg" id="lead-msg" role="status">Preview only: this form doesn't send anything.</p>
+  </form>
+  <p class="disc" data-copy="disclaimer"></p>
+  <div class="orb-dock-m end"><button class="orb inflow" type="button" data-orb aria-haspopup="dialog"><span class="orb-glow"></span><img src="assets/avatar.png" alt="" width="52" height="52"><span class="orb-l" data-chatlabel>Ask us</span></button></div>
+</section>
+</main>
+
+<button class="orb float" id="orb" type="button" data-orb aria-haspopup="dialog" aria-label="Ask us"><span class="orb-glow"></span><img src="assets/avatar.png" alt="" width="64" height="64"></button>
+
+<div class="chat" id="chat" role="dialog" aria-modal="false" aria-labelledby="chat-h" hidden>
+  <div class="chat-h"><img src="assets/avatar.png" alt="" width="36" height="36"><div><b id="chat-h">Conquest AI</b><small id="chat-sub">Preview: canned answers, no live AI</small></div><button class="x" id="chat-x" type="button" aria-label="Close chat">✕</button></div>
+  <div class="chat-log" id="chat-log" aria-live="polite"></div>
+  <div class="chat-q" id="chat-q"></div>
+  <form class="chat-in" id="chat-form"><input id="chat-input" type="text" autocomplete="off" placeholder="Ask about the AI receptionist, getting started…" aria-label="Your question"><button type="submit" class="btn gold sm">Ask</button></form>
+  <div class="chat-cta" id="chat-cta"></div>
+  <p class="chat-f" id="chat-f"></p>
+</div>
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script type="module" src="main.js"></script>
+<script src="lead.js" defer></script>
+</body>
+</html>
